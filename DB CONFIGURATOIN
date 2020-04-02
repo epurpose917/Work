@@ -1,0 +1,24 @@
+MYSQL/MARIADB CONFIGURATION
+#####################################################################################################################
+mysql -u root -p
+
+CREATE DATABASE SNIPEITDB DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+CREATE DATABASE MOODLEDB DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+CREATE DATABASE SEEDDMS DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+CREATE DATABASE OSTICKETDB DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+#######################################################################################################################
+
+GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,CREATE TEMPORARY TABLES,DROP,INDEX,ALTER ON SNIPEITDB.* TO 'SNIPEIT'@'localhost' IDENTIFIED BY 'root123';
+
+GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,CREATE TEMPORARY TABLES,DROP,INDEX,ALTER ON MOODLEDB.* TO 'MOODLE'@'localhost' IDENTIFIED BY 'root123';
+
+GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,CREATE TEMPORARY TABLES,DROP,INDEX,ALTER ON SEEDDMSDB.* TO 'SEEDDMS'@'localhost' IDENTIFIED BY 'root123';
+
+GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,CREATE TEMPORARY TABLES,DROP,INDEX,ALTER ON OSTICKETDB.* TO 'OSTICKET'@'localhost' IDENTIFIED BY 'root123';
+####################################################################################################################################################
+
+FLUSH PRIVILEGES;
+#############################################################################################################################
